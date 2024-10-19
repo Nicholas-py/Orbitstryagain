@@ -5,8 +5,15 @@ using UnityEngine;
 
 public class AchievementsSetup : MonoBehaviour
 {
+    private AchievementDataHolder dataholder = new AchievementDataHolder();
     private void Start() {
-        AchievementDataHolder dataholder = LeveltxtReader.ReadData<AchievementDataHolder>(LeveltxtReader.GetGlobalFilePath("Achievements"));
+
+        try {
+            AchievementDataHolder dataholder = LeveltxtReader.ReadData<AchievementDataHolder>(LeveltxtReader.GetGlobalFilePath("Achievements"));
+        }
+        catch {
+            LeveltxtReader.UpdateData(dataholder, LeveltxtReader.GetGlobalFilePath("Achievements"));
+        }
         for (int i = 0; i < dataholder.values.Length; i++) {
             AchievementsData.completed[i] = dataholder.values[i];
         }

@@ -4,5 +4,5 @@ using UnityEngine;
 
 public class AchievementDataHolder : DataHolder
 {
-    public bool[] values= new bool[] { false };
+    public bool[] values= new bool[GlobalData.achievementscount];
 }

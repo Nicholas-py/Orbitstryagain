@@ -22,7 +22,7 @@ public class LeveltxtReader
         T dataholder;
         if (filepath[0] == 'C' && filepath[1] == ':' && filepath[2] == '/') {
             dataholder = DataHolder.ReadFromText<T>(File.ReadAllText(filepath));
-
+            Debug.Log(dataholder.ToString());
         }
         else {
             TextAsset file = Resources.Load(filepath) as TextAsset;

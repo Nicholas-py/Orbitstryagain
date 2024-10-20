@@ -19,7 +19,6 @@ public class Popupifier : MonoBehaviour
 
 
     void PopUp(int achievementindex) {
-        Debug.Log(achievementindex);
         if (instance != gameObject) {
             GameEvents.achievementgotten -= PopUp;
             Destroy(gameObject);

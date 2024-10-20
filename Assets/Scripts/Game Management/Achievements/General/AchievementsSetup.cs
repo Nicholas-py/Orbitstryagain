@@ -5,8 +5,14 @@ using UnityEngine;
 
 public class AchievementsSetup : MonoBehaviour
 {
+    private AchievementDataHolder dataholder = new();
     private void Start() {
-        AchievementDataHolder dataholder = LeveltxtReader.ReadData<AchievementDataHolder>(LeveltxtReader.GetGlobalFilePath("Achievements"));
+        try {
+            dataholder = LeveltxtReader.ReadData<AchievementDataHolder>(LeveltxtReader.GetGlobalFilePath("Achievements"));
+        }
+        catch (Exception) {
+            LeveltxtReader.UpdateData(dataholder, LeveltxtReader.GetGlobalFilePath("Achievements"));
+        }
         for (int i = 0; i < dataholder.values.Length; i++) {
             AchievementsData.completed[i] = dataholder.values[i];
         }
@@ -18,8 +24,7 @@ public class AchievementsSetup : MonoBehaviour
                 Type type = Type.GetType(name);
 
                 var newboy = Activator.CreateInstance(type);
-                if (newboy is AchievementChecker) {
-                    AchievementChecker newboy2 = (AchievementChecker)newboy;
+                if (newboy is AchievementChecker newboy2) {
                     newboy2.parent = this;
                     newboy2.SetUp();
                 }

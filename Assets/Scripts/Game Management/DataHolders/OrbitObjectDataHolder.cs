@@ -22,6 +22,8 @@ public class OrbitObjectDataHolder : DataHolder
 
     public bool isrotating = false;
 
+    public Sprite sprite;
+
 
     public static OrbitObjectDataHolder GetDataHolder(ObjectScript orbiterscript) {
         OrbitObjectDataHolder dataholder = new() {
@@ -37,7 +39,8 @@ public class OrbitObjectDataHolder : DataHolder
             triggersexplosions = orbiterscript.triggersexplosions,
 
             explodespeedfactor = orbiterscript.explodespeedfactor,
-            isrotating = orbiterscript.isrotating
+            isrotating = orbiterscript.isrotating,
+            sprite = orbiterscript.gameObject.GetComponent<SpriteRenderer>().sprite
 
 
 
@@ -60,6 +63,8 @@ public class OrbitObjectDataHolder : DataHolder
 
         orbiterscript.explodespeedfactor = dataholder.explodespeedfactor;
         orbiterscript.isrotating = dataholder.isrotating;
+
+        orbiterscript.sprite = dataholder.sprite;
 
 
     }

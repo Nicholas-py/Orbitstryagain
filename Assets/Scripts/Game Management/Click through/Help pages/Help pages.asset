@@ -1,0 +1,36 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d464a9e2695cf944b771399bbda2dfc, type: 3}
+  m_Name: Help pages
+  m_EditorClassIdentifier: 
+  data:
+  - title: 'How to play: Moving Around'
+    text: Use WASD or the arrow keys to move. Up accelerates you, and makes you fly
+      farther into space, while down slows you and makes you fall inwards. Left and
+      right are useful for course changes when not in a tight orbit.
+  - title: 'How to play: Fuel'
+    text: You only have so much fuel, so use it carefully! If you run out you'll
+      have no choice but to drift through space.
+  - title: 'How to play: Collisions'
+    text: If objects in space collide, due to the high speeds they'll usually explode.
+      This includes your spaceship!
+  - title: 'How to play: The Flag'
+    text: The goal of the game is to maneuver until you hit the flag. Once you do,
+      the game will end and you'll recieve points depending on how well you did.
+  - title: 'How to play: Orbs'
+    text: The little blue things are orbs - collect them for extra points!
+  images:
+  - {fileID: 11400000, guid: 0b064fba99ccf0449ae0e5b0621696ea, type: 2}
+  - {fileID: 11400000, guid: 737c80bd2de9b9b458c026f4ab951fd6, type: 2}
+  - {fileID: 11400000, guid: 6ed2340a5fe1b3c4bae68cdefd42abe6, type: 2}
+  - {fileID: 11400000, guid: 1e541b0f79624944ca9e07cd11b4199d, type: 2}
+  - {fileID: 11400000, guid: dd116a7b54c8e724782bc9bb9039cd0d, type: 2}

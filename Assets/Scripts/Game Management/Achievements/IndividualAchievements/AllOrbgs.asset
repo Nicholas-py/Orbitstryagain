@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a34908b8e5db45489f4ab1db9828052, type: 3}
+  m_Name: AllOrbgs
+  m_EditorClassIdentifier: 
+  achievementname: Three Orb Game
+  classname: AllOrbs
+  description: Collect all three orbs in one game on level {x}
+  levels: 010000000200000003000000040000000500000006000000
+  image: {fileID: 21300000, guid: 200302dd0265f4341811ef2848edeb74, type: 3}

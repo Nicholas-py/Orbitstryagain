@@ -11,6 +11,7 @@ public class TitleBodyTextScroller : ClickThroughMenu
 
     // Must be a list of PageOfText jsons separated by semicolons
     public TextAsset jsondata;
+    
 
 
     protected PageOfText currentpage;

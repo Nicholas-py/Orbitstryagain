@@ -22,3 +22,20 @@ public class LevelDataHolder : DataHolder
     public float camerasize = 3;
 }
 
+[CreateAssetMenu]
+public class LevelScriptableObject : ScriptableObject {
+    public int level;
+    public Vector2 spaceshippos;
+    public Vector2 spaceshipspeed;
+
+    public Vector2[] orbs = new Vector2[3];
+
+    public Vector2 framesize = new();
+
+    public OrbitObjectDataHolder[] objects;
+
+    public int flagobject;
+    public float flagrotation = 0;
+    public float camerasize = 3;
+
+}

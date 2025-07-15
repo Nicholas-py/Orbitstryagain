@@ -1076,7 +1076,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d13764257aea34f43bc4c1a62299f287, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentpagenum: 0
   nextbutton: {fileID: 1861493502}
   prevbutton: {fileID: 1929284286}
   maxpages: 0
@@ -1091,6 +1090,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1536984684}
   - component: {fileID: 1536984685}
+  - component: {fileID: 1536984686}
   m_Layer: 0
   m_Name: AchievementsLoader
   m_TagString: Untagged
@@ -1111,8 +1111,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 44.360004}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 207670596}
   - {fileID: 2048457987}
+  - {fileID: 207670596}
   m_Father: {fileID: 903380271}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1536984685
@@ -1130,6 +1130,28 @@ MonoBehaviour:
   defaultcomplete: {fileID: 2048457986}
   defaultincomplete: {fileID: 207670595}
   firstachievementindex: 0
+  numberperpage: 0
+  achievements: {fileID: 0}
+  achievementbuttons:
+  - {fileID: 207670595}
+  - {fileID: 2048457986}
+--- !u!114 &1536984686
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1536984683}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3da58df9ad0f84d4a9ff6c690a621364, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  list:
+  - {fileID: 11400000, guid: 7b617f4fffbf60046b71218abb9326d3, type: 2}
+  - {fileID: 11400000, guid: 6413716ffff468b468507a6780a50e8f, type: 2}
+  - {fileID: 11400000, guid: bfde48fb658d9a74a937a17c7803bc0a, type: 2}
+  ismaster: 1
 --- !u!1001 &1695535494
 PrefabInstance:
   m_ObjectHideFlags: 0

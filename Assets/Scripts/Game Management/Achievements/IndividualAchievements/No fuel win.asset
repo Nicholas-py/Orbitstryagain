@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a34908b8e5db45489f4ab1db9828052, type: 3}
+  m_Name: No fuel win
+  m_EditorClassIdentifier: 
+  achievementname: No Fuel Win
+  classname: NoFuelWin
+  description: Win the game with no fuel remaining after {x} seconds
+  levels: 00000000050000000f0000001e0000003c000000f0000000
+  image: {fileID: 21300000, guid: 6514f0b21159597498540231df89fb3f, type: 3}

@@ -17,10 +17,10 @@ public class AchievementsSetup : MonoBehaviour
             AchievementsData.completed[i] = dataholder.values[i];
         }
 
-        for (int i = 0; i < AchievementsData.achievements.Length; i++) {
+        for (int i = 0; i < AchievementList.instance.list.Count; i++) {
 
-            if (!AchievementsData.completed[i]) { 
-                string name = AchievementsData.achievements[i];
+            if (0 == AchievementsData.completed[i]) { 
+                string name = AchievementList.instance.list[i].classname;
                 Type type = Type.GetType(name);
 
                 var newboy = Activator.CreateInstance(type);

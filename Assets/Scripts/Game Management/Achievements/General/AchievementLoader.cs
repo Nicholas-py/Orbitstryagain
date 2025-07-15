@@ -12,6 +12,10 @@ public class AchievementLoader : MonoBehaviour {
 
     [HideInInspector]
     public int numberperpage; //Set in the ClickThroughAchievements class (should be on the parent of this gameobject)
+    
+    public AchievementList achievements;
+
+    public List<GameObject> achievementbuttons;
 
     private int count;
 
@@ -29,18 +33,13 @@ public class AchievementLoader : MonoBehaviour {
     void GenerateButtons() {
         GameObject current;
         for (int i = 0; i+firstachievementindex < count && i < numberperpage; i++) {
-            if (AchievementsData.completed[i + firstachievementindex]) {
-                current = Instantiate(defaultcomplete);
-            }
-            else {
-                current = Instantiate(defaultincomplete);
-            }
+            current = Instantiate(achievementbuttons[AchievementsData.completed[i + firstachievementindex]]);
             current.transform.SetParent(transform);
             current.SetActive(true);
 
             TextMeshProUGUI[] texts = current.GetComponentsInChildren<TextMeshProUGUI>();
-            texts[0].text = AchievementsData.prettyachievements[i+firstachievementindex];
-            texts[1].text = AchievementsData.description[i+firstachievementindex];
+            texts[0].text = AchievementList.instance.list[i+firstachievementindex].achievementname;
+            texts[1].text = AchievementList.instance.list[i + firstachievementindex].description;
 
             current.transform.localScale = defaultincomplete.transform.localScale;
             current.transform.localPosition = GetNthCoordinate(i);

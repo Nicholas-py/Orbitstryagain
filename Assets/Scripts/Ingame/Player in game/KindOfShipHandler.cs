@@ -18,7 +18,6 @@ public class KindOfShipHandler : MonoBehaviour
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
         spriteRenderer.sprite = Spaceships.photos[spaceshiptype];
-        Debug.Log(spaceshiptype);
     }
 
     public float CalcStartingFuel(int level) {

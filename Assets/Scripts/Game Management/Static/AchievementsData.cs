@@ -1,21 +1,11 @@
-public class Achievement {
-    public int index;
-    public string name;
-    public string prettyname;
-    public string description;
-}
 
 
 public class AchievementsData {
-    public const int count = 3;
+    public const int count = GlobalData.achievementscount;
     public static int mostrecent;
 
-    public static string[] achievements = new string[count] { "NoFuelWin", "AllOrbs", "BeRich" };
-    public static string[] prettyachievements = new string[count] { "No fuel win", "3 Orb Game", "Be Rich"};
-    public static string[] description = new string[count] { "Win a game with no fuel remaining", "Collect all 3 orbs in a level", "Have 100 000 points at once" };
 
-
-    public static bool[] completed = new bool[count] { false, false, false };
+    public static int[] completed = new int[count] { 0,0,0 };
 
     public static void Save() {
         AchievementDataHolder dataholder = new AchievementDataHolder();

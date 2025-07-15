@@ -21,8 +21,7 @@ public class ObjectScript : MonoBehaviour
 
     public bool isrotating = false;
 
-    [HideInInspector]
-    public Sprite sprite;
+    public int sprite;
 
     private Vector2 vel;
     private Vector2 pos;
@@ -33,9 +32,11 @@ public class ObjectScript : MonoBehaviour
 
     private void Start() {
         SpriteRenderer spriteRenderer = GetComponent<SpriteRenderer>();
-        if (sprite != null) {
-            spriteRenderer.sprite = sprite;
-        }
+        Debug.Log("Starting "+ name +": "+ sprite);
+        Debug.Log("sprite: " + sprite.GetType());
+        Debug.Log("renderer " + spriteRenderer.sprite.GetType());
+        spriteRenderer.sprite = SpriteList.instance.list[sprite];
+
         rigid = GetComponent<Rigidbody2D>();
         if (isrotating) { 
             Rotatespritescript rotator = gameObject.AddComponent<Rotatespritescript>();

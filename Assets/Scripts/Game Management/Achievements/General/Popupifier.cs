@@ -23,7 +23,7 @@ public class Popupifier : MonoBehaviour
             GameEvents.achievementgotten -= PopUp;
             Destroy(gameObject);
         }
-        title.text = AchievementsData.prettyachievements[achievementindex];
+        title.text = AchievementList.instance.list[achievementindex].achievementname;
         gameObject.SetActive(true);
         StartCoroutine("Hide");
     }

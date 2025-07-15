@@ -22,7 +22,7 @@ public class LevelDataHolder : DataHolder
     public float camerasize = 3;
 }
 
-[CreateAssetMenu]
+[CreateAssetMenu (menuName = "Scriptables/Level")]
 public class LevelScriptableObject : ScriptableObject {
     public int level;
     public Vector2 spaceshippos;

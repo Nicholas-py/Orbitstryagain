@@ -13,4 +13,5 @@ MonoBehaviour:
   m_Name: Flag
   m_EditorClassIdentifier: 
   image: {fileID: 21300000, guid: c44d4f049d481e44e9fbf7925ecd0aa4, type: 3}
-  coords: {x: 0, y: 0}
+  coords: {x: -4, y: 1}
+  scale: {x: 7, y: 7}

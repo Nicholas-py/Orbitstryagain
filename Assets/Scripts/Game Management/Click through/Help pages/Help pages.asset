@@ -14,13 +14,23 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   data:
   - title: 'How to play: Moving Around'
-    text: 
+    text: Use WASD or the arrow keys to move. Up accelerates you, and makes you fly
+      farther into space, while down slows you and makes you fall inwards. Left and
+      right are useful for course changes when not in a tight orbit.
   - title: 'How to play: Fuel'
-    text: 
+    text: You only have so much fuel, so use it carefully! If you run out you'll
+      have no choice but to drift through space.
   - title: 'How to play: Collisions'
-    text: 
+    text: If objects in space collide, due to the high speeds they'll usually explode.
+      This includes your spaceship!
   - title: 'How to play: The Flag'
-    text: 
+    text: The goal of the game is to maneuver until you hit the flag. Once you do,
+      the game will end and you'll recieve points depending on how well you did.
   - title: 'How to play: Orbs'
-    text: 
-  images: []
+    text: The little blue things are orbs - collect them for extra points!
+  images:
+  - {fileID: 11400000, guid: 0b064fba99ccf0449ae0e5b0621696ea, type: 2}
+  - {fileID: 11400000, guid: 737c80bd2de9b9b458c026f4ab951fd6, type: 2}
+  - {fileID: 11400000, guid: 6ed2340a5fe1b3c4bae68cdefd42abe6, type: 2}
+  - {fileID: 11400000, guid: 1e541b0f79624944ca9e07cd11b4199d, type: 2}
+  - {fileID: 11400000, guid: dd116a7b54c8e724782bc9bb9039cd0d, type: 2}

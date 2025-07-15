@@ -13,4 +13,5 @@ MonoBehaviour:
   m_Name: Orb
   m_EditorClassIdentifier: 
   image: {fileID: 21300000, guid: 9d8fa9d48500bd94198294b03974d1b6, type: 3}
-  coords: {x: 0, y: 0}
+  coords: {x: -4, y: 1}
+  scale: {x: 4, y: 4}

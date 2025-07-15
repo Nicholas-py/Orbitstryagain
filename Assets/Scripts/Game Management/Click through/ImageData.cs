@@ -6,4 +6,5 @@ using UnityEngine;
 public class ImageData : ScriptableObject {
     public Sprite image;
     public Vector2 coords;
+    public Vector2 scale;
 }

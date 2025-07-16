@@ -7,7 +7,7 @@ public class GlobalData
 {
     public const int levelcount = 5;
     public static readonly string version = "0.21.10";
-    public const int spaceshipcount = 2;
+    public const int spaceshipcount = 3;
     public const int achievementscount = 3;
     
 }

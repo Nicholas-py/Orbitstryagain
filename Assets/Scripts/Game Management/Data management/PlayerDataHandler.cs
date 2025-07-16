@@ -33,9 +33,15 @@ public class PlayerDataHandler : MonoBehaviour {
         PlayerData.spaceshiplevel = dataholder.spaceshiplevel;
         PlayerData.highscores = dataholder.highscores;
         PlayerData.currentspaceship = dataholder.currentspaceship;
-        PlayerData.spaceshiplevels = dataholder.spaceshiplevels;
-        if (dataholder.spaceshiplevels[0] == 0) {
-            PlayerData.spaceshiplevels[0] = 1;
+        PlayerData.spaceshiplevels = new int[GlobalData.spaceshipcount];
+        for (int i = 0; i < dataholder.spaceshiplevels.Length; i++) {
+            if (dataholder.spaceshiplevels[i] == 0 && i == 0) {
+                PlayerData.spaceshiplevels[i] = 1;
+
+            }
+            else {
+                PlayerData.spaceshiplevels[i] = dataholder.spaceshiplevels[i];
+            }
         }
 
 

@@ -17,7 +17,7 @@ public class AchievementsSetup : MonoBehaviour
             AchievementsData.completed[i] = dataholder.values[i];
         }
 
-        for (int i = 0; i < AchievementList.instance.list.Count; i++) {
+       /*/ for (int i = 0; i < AchievementList.instance.list.Count; i++) {
 
             if (0 == AchievementsData.completed[i]) { 
                 string name = AchievementList.instance.list[i].classname;
@@ -33,7 +33,7 @@ public class AchievementsSetup : MonoBehaviour
                     throw new Exception("Nonexistent achievement type");
                 }
             }
-        }
+        }/*/
 
     }
 

@@ -5,7 +5,7 @@ using System;
 
 public class KindOfShipHandler : MonoBehaviour
 {
-    private SpaceshipType[] spaceships = new SpaceshipType[GlobalData.spaceshipcount] {new BasicSpaceship(),new FuelFiller()};
+    private SpaceshipType[] spaceships = new SpaceshipType[GlobalData.spaceshipcount] {new BasicSpaceship(),new FuelFiller(), new Accelerator()};
     private int spaceshiptype;
 
     private SpriteRenderer spriteRenderer;

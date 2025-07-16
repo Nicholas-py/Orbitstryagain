@@ -30,3 +30,14 @@ public class FuelFiller : SpaceshipType {
     }
 
 }
+
+public class Accelerator : SpaceshipType {
+    public override float CalcThrust(int level) {
+        return 0.3f * (1 + 0.15f * level);
+    }
+
+    public override float CalcStartingFuel(int level) {
+        return 150 * (1 + 0.15f * level);
+    }
+
+}

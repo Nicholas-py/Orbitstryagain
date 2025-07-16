@@ -34,7 +34,7 @@ public class FlagTracker : MonoBehaviour
     }
 
     bool ShouldDisplay(Vector2 offset) {
-        return offset.magnitude > 6;
+        return (offset.x > Screen.height || offset.y > Screen.width);
     }
 
     Vector2 GetOffset() {

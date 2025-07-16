@@ -9,4 +9,5 @@ public class GlobalData
     public static readonly string version = "0.21.10";
     public const int spaceshipcount = 2;
     public const int achievementscount = 3;
+    
 }

@@ -619,11 +619,11 @@ RectTransform:
   - {fileID: 1775825550}
   m_Father: {fileID: 669340413}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -150, y: -180}
+  m_AnchorMin: {x: 0.5, y: 0}
+  m_AnchorMax: {x: 0.5, y: 0}
+  m_AnchoredPosition: {x: -150, y: 58.5}
   m_SizeDelta: {x: 160, y: 30}
-  m_Pivot: {x: 0.5, y: 0.5}
+  m_Pivot: {x: 0.5, y: 0}
 --- !u!114 &208975077
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -924,11 +924,11 @@ RectTransform:
   - {fileID: 2079642770}
   m_Father: {fileID: 669340413}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 150, y: -180}
+  m_AnchorMin: {x: 0.5, y: 0}
+  m_AnchorMax: {x: 0.5, y: 0}
+  m_AnchoredPosition: {x: 150, y: 58.5}
   m_SizeDelta: {x: 160, y: 30}
-  m_Pivot: {x: 0.5, y: 0.5}
+  m_Pivot: {x: 0.5, y: 0}
 --- !u!114 &287428121
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1870,7 +1870,7 @@ MonoBehaviour:
   m_ScaleFactor: 0.8
   m_ReferenceResolution: {x: 800, y: 600}
   m_ScreenMatchMode: 0
-  m_MatchWidthOrHeight: 0
+  m_MatchWidthOrHeight: 0.474
   m_PhysicalUnit: 3
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
@@ -1989,6 +1989,7 @@ GameObject:
   - component: {fileID: 834217746}
   - component: {fileID: 834217749}
   - component: {fileID: 834217748}
+  - component: {fileID: 834217750}
   - component: {fileID: 834217747}
   m_Layer: 0
   m_Name: Main Camera
@@ -2043,7 +2044,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_BackGroundColor: {r: 0, g: 0, b: 0, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -2068,7 +2069,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 4
+  orthographic size: 3
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -2084,6 +2085,18 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
+--- !u!114 &834217750
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 834217745}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4810289feb79f574f91bca015508a491, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &896227591
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2405,11 +2418,11 @@ RectTransform:
   - {fileID: 1873001059}
   m_Father: {fileID: 669340413}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 365.3, y: 189}
+  m_AnchorMin: {x: 1, y: 1}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: -73.19998, y: -49.5}
   m_SizeDelta: {x: 30, y: 30}
-  m_Pivot: {x: 0.5, y: 0.5}
+  m_Pivot: {x: 1, y: 1}
 --- !u!114 &1042754467
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2613,7 +2626,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4275081742485001611, guid: aeceee2626e10584396e678c1cd74791, type: 3}
       propertyPath: m_Pivot.x
-      value: 0.5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4275081742485001611, guid: aeceee2626e10584396e678c1cd74791, type: 3}
       propertyPath: m_Pivot.y
@@ -2621,7 +2634,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4275081742485001611, guid: aeceee2626e10584396e678c1cd74791, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0.5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4275081742485001611, guid: aeceee2626e10584396e678c1cd74791, type: 3}
       propertyPath: m_AnchorMax.y
@@ -2629,7 +2642,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4275081742485001611, guid: aeceee2626e10584396e678c1cd74791, type: 3}
       propertyPath: m_AnchorMin.x
-      value: 0.5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4275081742485001611, guid: aeceee2626e10584396e678c1cd74791, type: 3}
       propertyPath: m_AnchorMin.y
@@ -2681,7 +2694,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4275081742485001611, guid: aeceee2626e10584396e678c1cd74791, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -340
+      value: 102.99997
       objectReference: {fileID: 0}
     - target: {fileID: 4275081742485001611, guid: aeceee2626e10584396e678c1cd74791, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -2830,11 +2843,11 @@ RectTransform:
   - {fileID: 1624591152}
   m_Father: {fileID: 669340413}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -180}
+  m_AnchorMin: {x: 0.5, y: 0}
+  m_AnchorMax: {x: 0.5, y: 0}
+  m_AnchoredPosition: {x: 0, y: 58.46277}
   m_SizeDelta: {x: 160, y: 30}
-  m_Pivot: {x: 0.5, y: 0.5}
+  m_Pivot: {x: 0.5, y: 0}
 --- !u!114 &1227831420
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3111,11 +3124,11 @@ RectTransform:
   - {fileID: 1366927777}
   m_Father: {fileID: 669340413}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -180}
+  m_AnchorMin: {x: 0.5, y: 0}
+  m_AnchorMax: {x: 0.5, y: 0}
+  m_AnchoredPosition: {x: 0, y: 58.5}
   m_SizeDelta: {x: 160, y: 30}
-  m_Pivot: {x: 0.5, y: 0.5}
+  m_Pivot: {x: 0.5, y: 0}
 --- !u!114 &1320654064
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3534,11 +3547,11 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 669340413}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 160}
+  m_AnchorMin: {x: 0.5, y: 1}
+  m_AnchorMax: {x: 0.5, y: 1}
+  m_AnchoredPosition: {x: 0, y: -48}
   m_SizeDelta: {x: 400, y: 100}
-  m_Pivot: {x: 0.5, y: 0.5}
+  m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &1426566232
 MonoBehaviour:
   m_ObjectHideFlags: 0

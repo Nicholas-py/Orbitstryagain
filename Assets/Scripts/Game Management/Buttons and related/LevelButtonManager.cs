@@ -37,6 +37,6 @@ public class LevelButtonManager : MonoBehaviour
     }
 
     Vector2 GetNthCoordinate(int n) {
-        return new Vector2(0, 60 - 45 * n)/transform.localScale.x;
+        return new Vector2(0, 60 - 80 * n)/transform.localScale.x;
     }
 }

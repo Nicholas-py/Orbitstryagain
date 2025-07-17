@@ -126,9 +126,6 @@ public class Levelmanager : MonoBehaviour
         GameStats.orbsgrabbed += 1;
     }
 
-    void Logg() {
-        Debug.Log("Log");
-    }
 
     void FireYouLoseDisplay() {
         if (GameStats.gamestate == "Playing") {

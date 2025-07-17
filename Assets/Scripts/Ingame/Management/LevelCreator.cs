@@ -4,15 +4,13 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
-public class LevelCreator : MonoBehaviour
-{
+public class LevelCreator : MonoBehaviour {
     public int levelnumber;
     private string filepath;
 
     public bool unlocked = false;
 
-    void Awake()
-    {
+    void Awake() {
         if (GameStats.level != 0) {
             levelnumber = GameStats.level;
             filepath = GetFilepath();
@@ -20,10 +18,10 @@ public class LevelCreator : MonoBehaviour
 
         }
         else {
-            PlayerData.spaceshiplevel = (int)(levelnumber*1.5);
+            PlayerData.spaceshiplevel = (int)(levelnumber * 1.5);
             PlayerData.spaceshiplevels = new int[1] { (int)(levelnumber * 1.5) };
             PlayerData.currentspaceship = 0;
-            Spaceships.photos = new List<Sprite>() {GetComponentInChildren<Arrowkeysscript>().gameObject.GetComponent<SpriteRenderer>().sprite };
+            Spaceships.photos = new List<Sprite>() { GetComponentInChildren<Arrowkeysscript>().gameObject.GetComponent<SpriteRenderer>().sprite };
         }
     }
 
@@ -39,7 +37,7 @@ public class LevelCreator : MonoBehaviour
 
 
 
-    LevelDataHolder PackageLevel () {
+    LevelDataHolder PackageLevel() {
         LevelDataHolder dataholder = new();
 
         dataholder.level = levelnumber;
@@ -49,9 +47,8 @@ public class LevelCreator : MonoBehaviour
         GameObject spaceship = physicsholder.GetComponentInChildren<PlayerScript>().gameObject;
         dataholder.spaceshippos = spaceship.transform.position;
         dataholder.spaceshipspeed = spaceship.GetComponent<ObjectScript>().startv;
-        Debug.Log(dataholder.spaceshipspeed);
-        
-        
+
+
 
 
         OrbScript[] orbs = GetComponentsInChildren<OrbScript>();
@@ -69,7 +66,7 @@ public class LevelCreator : MonoBehaviour
         for (int i = 0; i < orbiters.Length; i++) {
             ObjectScript script = orbiters[i];
             if (script.gameObject.GetComponent<PlayerScript>() == null) {
-                dataholder.objects[i-offset] = OrbitObjectDataHolder.GetDataHolder(script);
+                dataholder.objects[i - offset] = OrbitObjectDataHolder.GetDataHolder(script);
             }
             else {
                 offset++;
@@ -77,21 +74,21 @@ public class LevelCreator : MonoBehaviour
         }
         GameObject flag = GetComponentInChildren<FlagScript>().transform.parent.gameObject;
         ObjectScript flagbject = flag.GetComponent<ObjectScript>();
-        dataholder.flagobject = System.Array.IndexOf(orbiters, flagbject)-offset;
+        dataholder.flagobject = System.Array.IndexOf(orbiters, flagbject) - offset;
         dataholder.flagrotation = flag.transform.rotation.z;
 
         Camera maincam = GetComponentInChildren<Camera>();
         dataholder.camerasize = maincam.orthographicSize;
 
 
-        LeveltxtReader.UpdateData(dataholder,filepath);
+        LeveltxtReader.UpdateData(dataholder, filepath);
         return dataholder;
     }
 
 
 
 
-    void CreateLevel (LevelDataHolder dataholder) {
+    void CreateLevel(LevelDataHolder dataholder) {
         GameStats.level = dataholder.level;
         GameObject physicsholder = GetComponentInChildren<Physicses>().gameObject;
 
@@ -114,13 +111,13 @@ public class LevelCreator : MonoBehaviour
         frame.transform.localScale = dataholder.framesize;
 
         StarCopier starfield = GetComponentInChildren<StarCopier>();
-        starfield.starfieldcount = new Vector2(2 + (int)(dataholder.framesize.x / 10), 2 + (int)(dataholder.framesize.y / 5));
+        starfield.starfieldcount = new Vector2(12 + (int)(dataholder.framesize.x / 10), 12 + (int)(dataholder.framesize.y / 5));
 
         GameObject baseobject = GetComponentsInChildren<ObjectScript>()[1].gameObject;
         if (baseobject.GetComponentInChildren<FlagScript>() != null) {
             baseobject.GetComponentInChildren<FlagScript>().transform.parent = physicsholder.transform;
         }
-        
+
         foreach (ObjectScript obj in GetComponentsInChildren<ObjectScript>()) {
             if (obj.gameObject.GetComponent<PlayerScript>() == null) {
                 obj.gameObject.tag = "ToDestroy";
@@ -166,7 +163,9 @@ public class LevelCreator : MonoBehaviour
 
     [ProButton]
     public void LoadLevelToInspector() {
-        if (!unlocked) { return; }
+        if (!unlocked) { Debug.Log("Unlock to continue"); return; }
+        Debug.Log("Loading level " + levelnumber);
+        Debug.Log("Don't forget, sprites here won't save - add them to the SpriteList object on the PhysicsBox object, and change the objectscript.sprite field");
         filepath = GetFilepath();
         CreateLevel(LeveltxtReader.ReadData<LevelDataHolder>(filepath));
         unlocked = false;
@@ -174,9 +173,10 @@ public class LevelCreator : MonoBehaviour
 
     [ProButton]
     public void SaveLevel() {
-        if (!unlocked) { return; }
+        if (!unlocked) { Debug.Log("Unlock to continue"); return; }
+        Debug.Log("Saving level " + levelnumber);
+        Debug.Log("Once you're ready to ship, move the level" + levelnumber + ".txt asset from Level Backups to Resources");
         filepath = GetFilepath();
-        Debug.Log(filepath);
         PackageLevel();
         unlocked = false;
 

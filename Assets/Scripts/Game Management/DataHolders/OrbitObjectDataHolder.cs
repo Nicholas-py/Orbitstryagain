@@ -64,7 +64,6 @@ public class OrbitObjectDataHolder : DataHolder
         orbiterscript.explodespeedfactor = dataholder.explodespeedfactor;
         orbiterscript.isrotating = dataholder.isrotating;
 
-        Debug.Log(dataholder.sprite);
         orbiterscript.sprite = dataholder.sprite;
 
 

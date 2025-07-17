@@ -15,7 +15,6 @@ public class PauseButton : MonoBehaviour
 
     public void OnClicked() {
         if (statetransformation.ContainsKey(GameStats.gamestate)) {
-            Debug.Log("Buttoning"+GameStats.gamestate);
 
             bool ispaused = GameStats.gamestate.Contains("Paused"); 
             pausemenu.SetActive(!ispaused);

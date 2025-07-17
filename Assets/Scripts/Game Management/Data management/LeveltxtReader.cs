@@ -14,7 +14,6 @@ public class LeveltxtReader
    public static void UpdateData (DataHolder dataholder, string filepath) {
         string text = dataholder.SelfToJson();
         File.WriteAllText(filepath, text);
-        //Debug.Log(File.ReadAllText(filepath));
 
     }
 

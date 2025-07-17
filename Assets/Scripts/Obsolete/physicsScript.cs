@@ -22,16 +22,13 @@ public class physicsScript : MonoBehaviour {
                
             }
         }
-        //Time.timeScale = gamespeed;
     }
 
     Vector2 PullFrom(GameObject obj) {
         float dist = Vector2.Distance(obj.transform.position,thisguy.transform.position);
-        //Debug.Log(dist + "obj:", obj.gameObject);
         Vector2 gravdir = (obj.transform.position-thisguy.transform.position).normalized;
         float g = obj.gameObject.GetComponent<ObjectScript>().g;
         Vector2 pull = gravdir * g / (dist * dist);
-        //Debug.Log(obj +", "+ pull);
         return pull;
     }
 

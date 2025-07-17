@@ -21,8 +21,4 @@ public class YouLoseButton : MonoBehaviour {
         gameObject.SetActive(false);
     }
 
-    void Log() {
-        Debug.Log("delegate fired");
-    }
-
 }

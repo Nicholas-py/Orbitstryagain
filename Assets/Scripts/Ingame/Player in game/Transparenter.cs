@@ -7,7 +7,7 @@ public class Transparenter : MonoBehaviour
     public bool isenabled;
     void Start()
     {
-        gameObject.GetComponent<CircleCollider2D>().enabled = !isenabled;
+        gameObject.GetComponent<Collider2D>().enabled = !isenabled;
     }
 
 }

@@ -27,7 +27,8 @@ MonoBehaviour:
     text: The goal of the game is to maneuver until you hit the flag. Once you do,
       the game will end and you'll recieve points depending on how well you did.
   - title: 'How to play: Orbs'
-    text: The little blue things are orbs - collect them for extra points!
+    text: The little blue things are orbs. When you collect them, they give you a
+      few points immediately, then more if you finish the level.
   images:
   - {fileID: 11400000, guid: 0b064fba99ccf0449ae0e5b0621696ea, type: 2}
   - {fileID: 11400000, guid: 737c80bd2de9b9b458c026f4ab951fd6, type: 2}

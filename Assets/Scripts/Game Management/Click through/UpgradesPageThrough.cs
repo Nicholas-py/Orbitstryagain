@@ -42,7 +42,6 @@ public class UpgradesPageThrough : ClickThroughMenu
 
         spaceshipleveldisplay.UpdateDisplay(pagenumber);
         selectbutton.ChangePage(pagenumber);
-        Debug.Log(PlayerData.spaceshiplevels[pagenumber]);
         if (PlayerData.spaceshiplevels[pagenumber] == 0) {
             locked.SetActive(true);
         }

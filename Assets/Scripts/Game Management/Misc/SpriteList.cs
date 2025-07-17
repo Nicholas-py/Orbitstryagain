@@ -4,14 +4,14 @@ using UnityEngine;
 using System;
 
 public class SpriteList : MonoBehaviour {
-    public static SpriteList instance = null;
+    public static List<Sprite> instance;
     public bool ismaster;
 
     public List<Sprite> list = new List<Sprite>() { };
 
-    public void Start() {
+    public void Awake() {
         if (ismaster && instance == null) {
-            instance = this;
+            instance = this.list;
         }
         else { Destroy(this); }
     }

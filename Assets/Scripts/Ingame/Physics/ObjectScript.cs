@@ -32,10 +32,9 @@ public class ObjectScript : MonoBehaviour
 
     private void Start() {
         SpriteRenderer spriteRenderer = GetComponent<SpriteRenderer>();
-        Debug.Log("Starting "+ name +": "+ sprite);
-        Debug.Log("sprite: " + sprite.GetType());
-        Debug.Log("renderer " + spriteRenderer.sprite.GetType());
-        spriteRenderer.sprite = SpriteList.instance.list[sprite];
+        spriteRenderer.sprite = SpriteList.instance[sprite];
+        Debug.Log(sprite+" "+name);
+
 
         rigid = GetComponent<Rigidbody2D>();
         if (isrotating) { 
@@ -50,7 +49,12 @@ public class ObjectScript : MonoBehaviour
 
 
     private void FixedUpdate() {
-        vel = rigid.velocity;
+        if (rigid == null) {
+            rigid = GetComponent<Rigidbody2D>();
+        }
+        else {
+            vel = rigid.velocity;
+        }
         pos = transform.position;
     }
 

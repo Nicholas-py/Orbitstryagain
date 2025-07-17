@@ -6,7 +6,7 @@ public class ClickThroughAchievements : ClickThroughMenu {
     private int currentindex;
 
     [SerializeField]
-    private int numberperpage;
+    private int numberperpage; 
 
     private AchievementLoader loader;
 
